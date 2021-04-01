@@ -1,3 +1,5 @@
+![screenshot](screenshot.gif)
+
 # ofxDualSense
 Interact with PlayStation DualSense controller
 

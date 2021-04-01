@@ -6,6 +6,7 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
 	ofSetVerticalSync(true);
+	ofSetWindowTitle("ofxDualSense example");
 
 	this->controllers = ofxDualSense::Controller::listControllers();
 	for (auto& controller : controllers) {

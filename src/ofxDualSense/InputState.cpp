@@ -109,7 +109,7 @@ namespace ofxDualSense {
 
 			int iTouch = 0;
 			for (const auto& touch : this->touchPadTouches) {
-				drawAnalogue2D(ofRectangle(bounds.width * (iTouch + 6) / 8, 0, bounds.width / 8, bounds.height / 2)
+				drawAnalogue2D(ofRectangle(bounds.width * 6 / 8, bounds.height / 4 * iTouch, bounds.width / 4, bounds.height / 4)
 					, touch
 					, false
 					, "touchPadTouches[" + ofToString(iTouch) + "]");
