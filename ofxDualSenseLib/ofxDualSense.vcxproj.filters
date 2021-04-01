@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ofxDualSense">
+      <UniqueIdentifier>{756f9e50-474e-4d31-a4f0-4ecf098bbf33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{9bd4a61b-501f-4aa8-9966-89eb727b54bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\DualSenseWindows">
+      <UniqueIdentifier>{45083d1f-af2e-402d-99ca-b26fb1339cec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ofxDualSense\Controller.h">
+      <Filter>ofxDualSense</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\DS5_Input.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\DS5_Output.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\DS5State.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\DSW_Api.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\Helpers.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\IO.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\Device.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\DualSenseWindows\DS_CRC32.h">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxDualSense\Exception.h">
+      <Filter>ofxDualSense</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxDualSense\InputState.h">
+      <Filter>ofxDualSense</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxDualSense\OutputState.h">
+      <Filter>ofxDualSense</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\libs\DualSenseWindows\DS5_Input.cpp">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\DualSenseWindows\DS5_Output.cpp">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\DualSenseWindows\Helpers.cpp">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\DualSenseWindows\IO.cpp">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\DualSenseWindows\DS_CRC32.cpp">
+      <Filter>libs\DualSenseWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxDualSense\Controller.cpp">
+      <Filter>ofxDualSense</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxDualSense\Exception.cpp">
+      <Filter>ofxDualSense</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxDualSense\InputState.cpp">
+      <Filter>ofxDualSense</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
