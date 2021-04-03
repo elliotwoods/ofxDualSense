@@ -3,6 +3,18 @@
 
 namespace ofxDualSense {
 	//----------
+	glm::vec2
+		applyDeadZone(const glm::vec2& analogStickValue, float deadZone)
+	{
+		glm::vec2 result{
+			abs(analogStickValue.x) < deadZone ? 0.0f : analogStickValue.x
+			, abs(analogStickValue.y) < deadZone ? 0.0f : analogStickValue.y
+		};
+
+		return result;
+	}
+
+	//----------
 	void
 		InputState::draw(const ofRectangle & bounds) const
 	{

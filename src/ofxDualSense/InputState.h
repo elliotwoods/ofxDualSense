@@ -6,6 +6,9 @@
 #include "ofRectangle.h"
 
 namespace ofxDualSense {
+	glm::vec2 applyDeadZone(const glm::vec2& analogStickValue
+		, float deadZone = 4.0f / 128.0f);
+
 	struct InputState{
 		/// <summary>
 		///  A utilty function for drawing the data
