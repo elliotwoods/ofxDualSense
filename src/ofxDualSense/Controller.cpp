@@ -51,6 +51,8 @@ namespace ofxDualSense {
 	void
 		Controller::update()
 	{
+		this->frameIsNew = false;
+
 		try {
 			// INPUT
 			{
@@ -148,6 +150,8 @@ namespace ofxDualSense {
 				this->inputState.headPhoneConnected = inputState.headPhoneConnected;
 				this->inputState.leftTriggerFeedback = (float)inputState.leftTriggerFeedback / 255.0f;
 				this->inputState.rightTriggerFeedback = (float)inputState.rightTriggerFeedback / 255.0f;
+
+				this->frameIsNew = true;
 			}
 
 			// OUTPUT
@@ -174,6 +178,27 @@ namespace ofxDualSense {
 		catch (const Exception& e) {
 			ofLogError("ofxDualSense") << "Failed to update #" << this->index << " : " << e.what();
 		}
+	}
+
+	//----------
+	void
+		Controller::reconnect()
+	{
+		try {
+			throwIfError(
+				DS5W::reconnectDevice(&this->deviceContext)
+			);
+		}
+		catch (const Exception& e) {
+			ofLogError("ofxDualSense") << "Failed to update #" << this->index << " : " << e.what();
+		}
+	}
+
+	//----------
+	bool
+		Controller::isFrameNew() const
+	{
+		return this->frameIsNew;
 	}
 
 	//----------

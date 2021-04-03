@@ -10,5 +10,5 @@ public:
 	void draw() override;
 	void exit() override;
 
-	vector<std::shared_ptr<ofxDualSense::Controller>> controllers;
+	vector<shared_ptr<ofxDualSense::Controller>> controllers;
 };

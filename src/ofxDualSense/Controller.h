@@ -21,6 +21,9 @@ namespace ofxDualSense {
 		~Controller();
 
 		void update();
+		void reconnect();
+		bool isFrameNew() const;
+
 		const InputState & getInputState() const;
 		void setOutputState(const OutputState&);
 
@@ -31,6 +34,7 @@ namespace ofxDualSense {
 
 		void free();
 	protected:
+		bool frameIsNew = false;
 		bool initialised = false;
 		size_t index;
 		DS5W::DeviceContext deviceContext;

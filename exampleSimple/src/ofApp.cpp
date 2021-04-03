@@ -19,6 +19,9 @@ void ofApp::update() {
 	for (auto& controller : this->controllers) {
 		controller->update();
 
+		if (!controller->isFrameNew()) {
+			controller->reconnect();
+		}
 		auto inputState = controller->getInputState();
 		ofxDualSense::OutputState outputState;
 		outputState.hardRumble = inputState.leftTrigger;
@@ -48,6 +51,10 @@ void ofApp::draw() {
 	for (const auto& controller : this->controllers) {
 		const auto & inputState = controller->getInputState();
 		inputState.draw(ofRectangle(0, i * 300, ofGetWidth(), 300));
+
+		if (!controller->isFrameNew()) {
+			ofDrawBitmapStringHighlight("No frame", glm::vec2(20, i * 300 + 20));
+		}
 	}
 }
 

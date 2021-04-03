@@ -48,6 +48,7 @@
     <ClInclude Include="..\src\ofxDualSense\OutputState.h">
       <Filter>ofxDualSense</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\ofxDualSense.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\libs\DualSenseWindows\DS5_Input.cpp">

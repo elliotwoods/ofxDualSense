@@ -44,7 +44,7 @@
     <ClCompile Include="..\src\ofxDualSense\InputState.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6891a0b0-ad9e-4042-909d-1b5fdb4a3e39}</ProjectGuid>
+    <ProjectGuid>{45411E6A-7F70-4659-AFA2-C0A3A1C319D3}</ProjectGuid>
     <RootNamespace>ofxDualSense</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
