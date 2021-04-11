@@ -120,11 +120,11 @@ namespace ofxDualSense {
 				, "analogStickRight");
 
 			int iTouch = 0;
-			for (const auto& touch : this->touchPadTouches) {
+			for (const auto& touchIt : this->touchPadTouches) {
 				drawAnalogue2D(ofRectangle(bounds.width * 6 / 8, bounds.height / 4 * iTouch, bounds.width / 4, bounds.height / 4)
-					, touch
+					, touchIt.second
 					, false
-					, "touchPadTouches[" + ofToString(iTouch) + "]");
+					, "touchPadTouches[" + ofToString(touchIt.first) + "]");
 				iTouch++;
 			}
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <glm/glm.hpp>
-#include <vector>
+#include <map>
 #include <DualSenseWindows/DS5State.h>
 #include "ofRectangle.h"
 
@@ -23,7 +23,7 @@ namespace ofxDualSense {
 		float leftTrigger;
 		float rightTrigger;
 
-		std::vector<glm::vec2> touchPadTouches;
+		std::map<uint8_t, glm::vec2> touchPadTouches;
 
 		struct {
 			bool square;

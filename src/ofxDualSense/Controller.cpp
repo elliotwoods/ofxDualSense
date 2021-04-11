@@ -91,17 +91,21 @@ namespace ofxDualSense {
 				{
 					this->inputState.touchPadTouches.clear();
 
-					if (inputState.touchPoint1.x != 0) {
-						this->inputState.touchPadTouches.push_back({
+					if (inputState.touchPoint1.down) {
+						this->inputState.touchPadTouches.emplace(
+							inputState.touchPoint1.id
+							, glm::vec2 {
 							(float)inputState.touchPoint1.x / 1920 * 2.0f - 1.0f // 2000 this is according to the lib docs
 							, (float)inputState.touchPoint1.y / 1080 * 2.0f - 1.0f
 							});
 					}
 
-					if (inputState.touchPoint2.x != 0) {
-						this->inputState.touchPadTouches.push_back({
-							(float)inputState.touchPoint2.x / 1920 * 2.0f - 1.0f // 2000 this is according to the lib docs
-							, (float)inputState.touchPoint2.y / 1080 * 2.0f - 1.0f
+					if (inputState.touchPoint2.down) {
+						this->inputState.touchPadTouches.emplace(
+							inputState.touchPoint2.id
+							, glm::vec2 {
+								(float)inputState.touchPoint2.x / 1920 * 2.0f - 1.0f // 2000 this is according to the lib docs
+								, (float)inputState.touchPoint2.y / 1080 * 2.0f - 1.0f
 							});
 					}
 				}
