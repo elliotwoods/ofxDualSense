@@ -124,7 +124,7 @@ namespace ofxDualSense {
 				drawAnalogue2D(ofRectangle(bounds.width * 6 / 8, bounds.height / 4 * iTouch, bounds.width / 4, bounds.height / 4)
 					, touchIt.second
 					, false
-					, "touchPadTouches[" + ofToString(touchIt.first) + "]");
+					, "touchPadTouches[" + ofToString((int) touchIt.first) + "]");
 				iTouch++;
 			}
 
