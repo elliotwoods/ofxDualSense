@@ -6,11 +6,28 @@ namespace ofxDualSense {
 	glm::vec2
 		applyDeadZone(const glm::vec2& analogStickValue, float deadZone)
 	{
-		glm::vec2 result{
-			abs(analogStickValue.x) < deadZone ? 0.0f : analogStickValue.x
-			, abs(analogStickValue.y) < deadZone ? 0.0f : analogStickValue.y
-		};
+		glm::vec2 result;
 
+		if (abs(analogStickValue.x) < deadZone) {
+			result.x = 0.0f;
+		}
+		else if (analogStickValue.x > 0) {
+			result.x = ofMap(analogStickValue.x, deadZone, 1.0f, 0.0f, 1.0f);
+		}
+		else {
+			result.x = ofMap(analogStickValue.x, -deadZone, -1.0f, 0.0f, -1.0f);
+		}
+
+		if (abs(analogStickValue.y) < deadZone) {
+			result.y = 0.0f;
+		}
+		else if (analogStickValue.y > 0) {
+			result.y = ofMap(analogStickValue.y, deadZone, 1.0f, 0.0f, 1.0f);
+		}
+		else {
+			result.y = ofMap(analogStickValue.y, -deadZone, -1.0f, 0.0f, -1.0f);
+		}
+		
 		return result;
 	}
 
