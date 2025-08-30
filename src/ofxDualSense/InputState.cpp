@@ -224,6 +224,23 @@ namespace ofxDualSense {
 			drawButton(ofRectangle(bounds.width * 1 / 8, bounds.height / 16 * 14, bounds.width / 8, bounds.height / 16)
 				, this->buttons.mic
 				, "mic");
+
+			drawAnalogue1D(ofRectangle(bounds.width * 1 / 3, bounds.height / 16 * 15, bounds.width / 3, bounds.height / 16)
+				, this->battery.level
+				, false
+				, "battery.level");
+			{
+				string batteryStatusString = "";
+				if (battery.charging) {
+					batteryStatusString += "[charging] ";
+				}
+				if (battery.fullyCharged) {
+					batteryStatusString += "[fully charged]";
+				}
+				if (!batteryStatusString.empty()) {
+					ofDrawBitmapString(batteryStatusString, bounds.width * 1 / 3, bounds.height / 16 * 15 + 10);
+				}
+			}
 		}
 		ofPopMatrix();
 	}
